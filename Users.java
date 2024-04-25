@@ -6,6 +6,8 @@ public class User {
     private double weight;
 
     public User(Scanner scanner) {
+
+        System.out.println("The following messages will ask you for information about you: ");
         System.out.println("Enter your name:");
         this.name = scanner.nextLine();
         System.out.println("Enter your age:");
