@@ -10,4 +10,4 @@ Michael Truong - User Class
 
 Jared Lewis - Schedule Class/Project Manager
 
-Esha Shah - Exercises Class
+Esha Shah - Workouts Class
