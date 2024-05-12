@@ -5,27 +5,33 @@ public class User {
     private int age;
     private double weight;
 
-    public User(Scanner scanner) {
-
-        System.out.println("The following messages will ask you for information about you: ");
-        System.out.println("Enter your name:");
-        this.name = scanner.nextLine();
-        System.out.println("Enter your age:");
-        this.age = scanner.nextInt();
-        System.out.println("Enter your weight:");
-        this.weight = scanner.nextDouble();
-        scanner.nextLine();     }
+    public User(String name, int age, double weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
 
     // Getters
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
     public int getAge() {
         return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public double getWeight() {
         return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 }
