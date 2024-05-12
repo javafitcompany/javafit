@@ -20,7 +20,7 @@ public class Main {
         double weight = scanner.nextDouble();
         scanner.nextLine();
 
-        User user = new User(name, age, weight);
+        user = new User(name, age, weight);
 
         boolean addingNewDate = true;
         do {
@@ -39,7 +39,7 @@ public class Main {
                 int reps = scanner.nextInt();
                 scanner.nextLine();
 
-                schedule.addWorkout(new Workout(exercise, reps, focus));
+                schedule.addWorkout(new Workout(focus, exercise, reps));
 
                 System.out.print("Are you finished adding exercises? (yes/no): ");
                 addingWorkouts = !scanner.nextLine().trim().equalsIgnoreCase("yes");
@@ -75,7 +75,7 @@ public class Main {
             for (int j = 0; j < schedule.getWorkoutCount(); j++) {
                 Workout workout = schedule.getWorkouts()[j];
                 if (workout != null) {
-                    System.out.println(" Focus: ") +workout.getFocus() + ", Exercise: " + workout.getExercises() + ", Reps: " + workout.getReps());
+                    System.out.println(" Focus: " + workout.getFocus() + ", Exercise: " + workout.getExerciseName() + ", Reps: " + workout.getReps());
                 }
             }
         }

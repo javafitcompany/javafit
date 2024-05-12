@@ -16,14 +16,14 @@ public class User {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName() {
         this.name = name;
     }
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge() {
         this.age = age;
     }
 
@@ -31,7 +31,7 @@ public class User {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight() {
         this.weight = weight;
     }
 }
