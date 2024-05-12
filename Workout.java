@@ -1,11 +1,13 @@
 public class Workout {
     private String exerciseName;
+    private int sets;
     private int reps;
     private String focus;
 
-    public Workout(String focus, String exerciseName, int reps) {
+    public Workout(String focus, String exerciseName, int sets, int reps) {
         this.focus = focus;
         this.exerciseName = exerciseName;
+        this.sets = sets;
         this.reps = reps;
     }
 
@@ -24,6 +26,14 @@ public class Workout {
 
     public void setExerciseName(String exerciseName) {
         this.exerciseName = exerciseName;
+    }
+
+    public int getSets() {
+        return sets;
+    }
+
+    public void setSets() {
+        this.sets = sets;
     }
 
     public int getReps() {

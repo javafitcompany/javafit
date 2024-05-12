@@ -35,11 +35,13 @@ public class Main {
 
                 System.out.print("Enter exercise name: ");
                 String exercise = scanner.nextLine();
+                System.out.print("Enter the number of sets: ");
+                int sets = scanner.nextInt();
                 System.out.print("Enter the number of reps: ");
                 int reps = scanner.nextInt();
                 scanner.nextLine();
 
-                schedule.addWorkout(new Workout(focus, exercise, reps));
+                schedule.addWorkout(new Workout(focus, exercise, sets, reps));
 
                 System.out.print("Are you finished adding exercises? (yes/no): ");
                 addingWorkouts = !scanner.nextLine().trim().equalsIgnoreCase("yes");
@@ -75,7 +77,8 @@ public class Main {
             for (int j = 0; j < schedule.getWorkoutCount(); j++) {
                 Workout workout = schedule.getWorkouts()[j];
                 if (workout != null) {
-                    System.out.println(" Focus: " + workout.getFocus() + ", Exercise: " + workout.getExerciseName() + ", Reps: " + workout.getReps());
+                    System.out.println(" Focus: " + workout.getFocus());
+                    System.out.println(" Exercise: " + workout.getExerciseName() + " Sets: " + workout.getSets() + " Reps: " + workout.getReps());
                 }
             }
         }
