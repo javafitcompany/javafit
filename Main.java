@@ -1,8 +1,15 @@
 import java.util.Scanner;
+import java.sql.Date; // sql.Date allows easy parsing from strings
 
+/**
+ * Main class to run JavaFit
+ */
 public class Main {
+    private static Schedule[] schedules = new Schedule[5];
+    private static int scheduleCount = 0;
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         // Create users
         User user1 = new User(scanner);
