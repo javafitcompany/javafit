@@ -11,6 +11,11 @@ public class User extends Person {
         this.height = height;
     }
 
+    @Override
+    public void displayRole() {
+        System.out.println("Role: User");
+    }
+
     // Getter and setter for weight and height
     public double getWeight() {
         return weight;

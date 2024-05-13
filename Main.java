@@ -124,16 +124,17 @@ public class Main {
     private static void printReport() {
         System.out.println("\n" + user.getName() + "'s Latest Information:"); // first prints the user's personal info
         System.out.println("Name: " + user.getName());
+        user.displayRole(); // prints the user's role from the abstract override in User class
         System.out.println("Age: " + user.getAge());
         System.out.println("Weight: " + user.getWeight() + " lbs");
 
         System.out.println("\n" + user.getName() + "'s Workout Report:"); // then prints the workout report
-        for (int i = 0; i < scheduleCount; i++) {
+        for (int i = 0; i < scheduleCount; i++) { // loop that allows for date input until the date array is full
             Schedule schedule = schedules[i];
             System.out.println("Date: " + schedule.getWorkoutDate());
-            for (int j = 0; j < schedule.getWorkoutCount(); j++) {
+            for (int j = 0; j < schedule.getWorkoutCount(); j++) { // loop that allows for workout input until the workout array is full
                 Workout workout = schedule.getWorkouts()[j];
-                if (workout != null) {
+                if (workout != null) { // as long as the workout input exists then a report will be printed
                     System.out.println(" Focus: " + workout.getFocus());
                     System.out.println(" Exercise: " + workout.getExerciseName() + " Sets: " + workout.getSets() + " Reps: " + workout.getReps());
                 }
