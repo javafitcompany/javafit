@@ -5,15 +5,25 @@ public abstract class Person {
     protected String name;
     protected int age;
 
+    /**
+     * Sets the name and age which will be used in any other class that involves a person
+     * @param name
+     * @param age
+     */
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    // Abstract method
+    /**
+     * Abstract method that displays the role of the person in another class. This will be overidden.
+     */
     public abstract void displayRole();
 
-    // Getters and setters
+    /**
+     * Getters and Setters for the Person class
+     * @return
+     */
     public String getName() {
         return name;
     }

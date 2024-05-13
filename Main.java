@@ -29,8 +29,14 @@ public class Main {
         double weight = scanner.nextDouble();
         scanner.nextLine();
 
-        user = new User(name, age, weight, height); // Constructor call
+        /**
+         * Constructor call for User
+         */
+        user = new User(name, age, weight, height);
 
+        /**
+         * Creates choice variable and do switch loop which gives user options for entering data, calculating BMI, or exiting
+         */
         int choice;
         do {
             System.out.println("Choose an option:");
@@ -42,7 +48,7 @@ public class Main {
             scanner.nextLine();
 
             /**
-             * Switch loop for user to select entering workout data or calculating BMI
+             * Switch loop for user to select entering workout data, calculating BMI, or exiting
              */
             switch (choice) {
                 case 1:
@@ -69,15 +75,22 @@ public class Main {
     private static void enterWorkoutData() {
         boolean addingNewDate = true;
         do {
+            /**
+             * Causes getWorkoutData to exit if max number of dates has been entered
+             */
             if (scheduleCount >= schedules.length) {
                 System.out.println("Maximum number of schedules reached. No further schedules can be added.");
                 break; // Exit the loop if the array is full
             }
-
+            /**
+             * Schedule object created for data input
+             */
             System.out.print("Enter the date for the workout session (yyyy-mm-dd): ");
             Date date = Date.valueOf(scanner.nextLine());
             Schedule schedule = new Schedule(date);
-
+            /**
+             * Loop to add workout data if the user chooses to do so
+             */
             boolean addingWorkouts = true;
             while (addingWorkouts) {
                 System.out.print("Enter the workout focus (core, chest, etc): ");
@@ -98,7 +111,9 @@ public class Main {
 
             schedules[scheduleCount++] = schedule;
 
-            // Ask if user wants to continue if there is enough space left in the date array
+            /**
+             * Ask user if they want to add workouts for another date if there's room left in the array
+             */
             if (scheduleCount < schedules.length) {
                 System.out.print("Do you want to enter workouts for another date? (yes/no): ");
                 addingNewDate = scanner.nextLine().trim().equalsIgnoreCase("yes");

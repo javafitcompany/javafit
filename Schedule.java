@@ -8,12 +8,20 @@ public class Schedule {
     private Workout[] exercises;
     private int reps;
 
+    /**
+     * Schedule constructor invocation
+     * @param workoutDate
+     */
     public Schedule(Date workoutDate) {
         this.workoutDate = workoutDate;
         this.exercises = new Workout[10];
         this.reps = 0;
     }
 
+    /**
+     * Method for adding workouts
+     * @param workout
+     */
     public void addWorkout(Workout workout) {
         if (reps < exercises.length) {
             exercises[reps++] = workout;
