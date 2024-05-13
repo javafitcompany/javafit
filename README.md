@@ -11,3 +11,4 @@ Michael Truong - User Class
 Jared Lewis - Schedule Class/Project Manager
 
 Esha Shah - Workouts Class
+![java fit diagram](https://github.com/javafitcompany/javafit/assets/158989888/c84ea5a6-9bf8-4bef-871a-5d24779407d3)
