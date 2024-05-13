@@ -1,37 +1,20 @@
-import java.util.Scanner;
-
-public class User {
-    private String name;
-    private int age;
+/**
+ * User class to store user information, inheriting from Person.
+ */
+public class User extends Person {
     private double weight;
 
     public User(String name, int age, double weight) {
-        this.name = name;
-        this.age = age;
+        super(name, age); // Calls the constructor of the Person class
         this.weight = weight;
     }
 
-    // Getters
-    public String getName() {
-        return name;
-    }
-
-    public void setName() {
-        this.name = name;
-    }
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge() {
-        this.age = age;
-    }
-
+    // Getter and setter for weight
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight() {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }

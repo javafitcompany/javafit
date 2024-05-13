@@ -11,6 +11,11 @@ public class Workout {
         this.reps = reps;
     }
 
+    // Overloaded method with defaults
+    public Workout() {
+        this("General Focus", "General Exercise", 1, 10); // Default focus, exercise, 1 set, 10 reps
+    }
+
     // Getters
     public String getFocus() {
         return focus;
